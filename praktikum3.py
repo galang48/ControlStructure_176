@@ -1,65 +1,67 @@
-def penilaian_siswa(persen_nilai):
-    if persen_nilai >= 90:
-        return "Excellent performance"
-    elif persen_nilai >= 80:
-        return "Very Good performance"
-    elif persen_nilai >= 70:
-        return "Good performance"
-    elif persen_nilai >= 60:
-        return "Average performance"
+# 1. Evaluasi Murid
+print("Evaluasi Murid")
+while True:
+    # Meminta input dari pengguna untuk persentase nilai
+    nilai = int(input("Masukkan persentase murid: "))
+    # Mengevaluasi nilai yang dimasukkan
+    if nilai >= 90:
+        print("Excellent performance")
+        break # Menghentikan loop jika kondisi terpenuhi
+    elif nilai >= 80:
+        print("Very Good performance")
+        break # Menghentikan loop jika kondisi terpenuhi
+    elif nilai >= 70:
+        print("Good performance")
+        break # Menghentikan loop jika kondisi terpenuhi
+    elif nilai >= 60:
+        print("Average performance")
+        break # Menghentikan loop jika kondisi terpenuhi
     else:
-        return "Below average performance"
+        print("Below average performance")
+print('\n') # Memisahkan output dari program lainnya
 
 
-def angka_terbesar(a, b, c):
-    if a >= b and a >= c:
-        return a
-    elif b >= a and b >= c:
-        return b
-    else:
-        return c
+# 2. Program Angka Terbesar
+print("2. Program Angka Terbesar")
+# Mengambil tiga input angka dari pengguna
+angka1 = int(input("Masukkan Angka Pertama: "))
+angka2 = int(input("Masukkan Angka Kedua: "))
+angka3 = int(input("Masukkan Angka Ketiga: "))
+# Menentukan angka terbesar menggunakan if-elif-else
+if angka1 >= angka2 and angka1 >= angka3:
+    print("Angka", angka1, "merupakan angka terbesar")
+elif angka2 >= angka1 and angka2 >= angka3:
+    print("Angka", angka2, "adalah angka terbesar")
+else:
+    print("Angka", angka3, "merupakan angka terbesar")
+print('\n') # Memisahkan output dari program lainnya
 
 
-def angka_fibonacci(n):
-    urutan_fibonacchi = [0, 1]
-    for i in range(2, n):
-        urutan_fibonacchi.append(urutan_fibonacchi[i - 1] + urutan_fibonacchi[i - 2])
-    return urutan_fibonacchi[:n]
+# 3. Program Fibonacci
+print("3. Program Fibonacci")
+# Meminta input jumlah angka dalam deret Fibonacci
+fibonacci = int(input("Masukkan jumlah angka: "))
+x, y = 0, 1 # Inisialisasi dua angka pertama dalam deret Fibonacci
+for z in range(fibonacci):
+    print(x, end=" ") # Mencetak angka Fibonacci
+    x, y = y, x + y # Mengupdate nilai x dan y
+print('\n') # Memisahkan output dari program lainnya
 
 
-def angka_ganjil(n):
-    for i in range(1, n + 1):
-        if i % 2 != 0:
-            print(i, end=" ")
+# 4. Program Angka Ganjil
+print("4. Program Angka Ganjil")
+# Meminta input batas atas angka
+Odd = int(input("Mau sampai angka berapa?: "))
+for o in range(1, Odd + 1):
+    if o % 2 != 0: # Mengecek apakah angka ganjil
+        print(o, end=" ") # Mencetak angka ganjil
+print('\n') # Memisahkan output dari program lainnya
 
 
-def perulangan(n):
-    for i in range(1, n + 1):
-        print(str(i) * i)
-
-
-# Penilaian siswa
-persen_nilai = int(input("Masukan persentase nilai: "))
-hasil = penilaian_siswa(persen_nilai)
-print(hasil)
-
-# Mencari angka terbesar
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
-c = float(input("Enter third number: "))
-hasil = angka_terbesar(a, b, c)
-print(f"Largest number is: {hasil}")
-
-# Mencetak angka Fibonacci
-n = int(input("Masukan nilai N untuk deret fibonacci: "))
-urutan_fibonacchi = angka_fibonacci(n)
-print("angka_Fibonacci series:", urutan_fibonacchi)
-
-# Mencetak angka ganjil
-n = int(input("Masukan nilai N untuk bilangan ganjil: "))
-print("Angka Ganjil Hingga angka", n, "adalah: ")
-angka_ganjil(n)
-
-# Perulangan angka
-n = int(input("Masukan nilai N untuk pola segitiga: "))
-perulangan(n)
+# 5. Program Pola
+print("5. Program Pola")
+# Meminta input tinggi pola dari pengguna
+Pattern = int(input("Tinggi pola: "))
+for s in range(1, Pattern + 1):
+    print((str(s) + " ") * s) # Mencetak pola angka
+print('\n') # Memisahkan output dari program lainnya
